@@ -29,7 +29,7 @@ export default function Home() {
     const token = localStorage.getItem("token")
 
     try {
-      const res = await fetch("http://localhost:8080/api/todos", {
+      const res = await fetch("https://todo-backend-i89t.onrender.com/api/todos", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ export default function Home() {
       return
     }
     try {
-      const res = await fetch("http://localhost:8080/api/todos", {
+      const res = await fetch("https://todo-backend-i89t.onrender.com/api/todos", {
         headers: {
           'Content-Type': 'application/json',
           "Authorization": `${token}`
@@ -96,7 +96,7 @@ export default function Home() {
   const handleDone = async (todoId) => {
     const token = localStorage.getItem("token")
     try {
-      const res = await fetch(`http://localhost:8080/api/todos/${todoId}`, {
+      const res = await fetch(`https://todo-backend-i89t.onrender.com/api/todos/${todoId}`, {
         method: "PUT",
         headers: {
           'Content-Type': 'application/json',
@@ -118,7 +118,7 @@ export default function Home() {
   const handleDelete = async (todoId) => {
     const token = localStorage.getItem("token")
     try {
-      const res = await fetch(`http://localhost:8080/api/todos/${todoId}`, {
+      const res = await fetch(`https://todo-backend-i89t.onrender.com/api/todos/${todoId}`, {
         method: "DELETE",
         headers: {
           'Content-Type': 'application/json',
@@ -141,7 +141,7 @@ export default function Home() {
 
     const token = localStorage.getItem("token")
     try {
-      const res = await fetch(`http://localhost:8080/api/todos/${editData.id}`, {
+      const res = await fetch(`https://todo-backend-i89t.onrender.com/api/todos/${editData.id}`, {
         method: "PUT",
         headers: {
           'Content-Type': 'application/json',
