@@ -3,6 +3,7 @@ package main
 import (
 	"Todo/db"
 	"Todo/routers"
+	"os"
 
 	"log"
 
@@ -24,5 +25,7 @@ func main() {
 	routers.AuthRouter(app)
 	routers.TodoRouter(app)
 
-	log.Fatal(app.Listen(":8080"))
+	port := os.Getenv("PORT")
+
+	log.Fatal(app.Listen(":"+port))
 }
