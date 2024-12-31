@@ -12,6 +12,8 @@
 
 # testing
 /coverage
+Todo/.env
+todo_frontend/.env
 # next.js
 /.next/
 /out/
